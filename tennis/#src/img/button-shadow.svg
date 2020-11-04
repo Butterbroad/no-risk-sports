@@ -1,0 +1,9 @@
+<svg width="184" height="6" viewBox="0 0 184 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="92.1307" cy="2.93749" rx="91.6534" ry="2.67992" fill="url(#paint0_diamond)"/>
+<defs>
+<radialGradient id="paint0_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(92.1307 2.93749) rotate(90) scale(2.67992 91.6534)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
