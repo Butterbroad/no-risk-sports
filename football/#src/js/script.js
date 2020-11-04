@@ -103,6 +103,9 @@ function betItemsFistHalf(item) {
             ${team1.v}
         </div>
         <div class="bet-item__factor bet-item__factor_2">
+            ${team1.v}
+        </div>
+        <div class="bet-item__factor bet-item__factor_3">
             ${team2.v}
         </div>
       </div>
