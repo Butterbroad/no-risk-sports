@@ -1,0 +1,72 @@
+//BURGER START
+
+// <div class="header__burger">
+//     <span></span>
+// </div>
+
+&__burger {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 10;
+    display: none;
+
+    span {
+        width: 18px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .3s ease;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        width: 18px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .3s ease;
+    }
+
+    &::after {
+        bottom: 14px;
+
+    }
+
+    &::before {
+        top: 14px;
+    }
+
+    &.active {
+        &::before {
+            transform: rotate(45deg);
+            top: 19px;
+            left: 11px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            top: 19px;
+            left: 11px;
+        }
+
+        span {
+            transform: scale(0);
+        }
+    }
+    @media (max-width: 570px) {
+        display: block;
+    }
+}
+
+//BURGER END

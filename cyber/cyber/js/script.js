@@ -90,7 +90,6 @@ function betItemsFistHalf(item) {
     }
     const team1 = factors.find(elem => elem.i === 1);
     const team2 = factors.find(elem => elem.i === 2);
-    const draw = factors.find(elem => elem.i === 0);
     //get league title
     const league = item.data.leagues.find(league => {
       return bet.league_id === league.id
@@ -120,9 +119,6 @@ function betItemsFistHalf(item) {
             ${team1.v}
         </div>
         <div class="bet-item__factor bet-item__factor_2">
-            ${draw.v}
-        </div>
-        <div class="bet-item__factor bet-item__factor_3">
             ${team2.v}
         </div>
       </div>
@@ -146,7 +142,6 @@ function betItemsLastHalf(item) {
     }
     const team1 = factors.find(elem => elem.i === 1);
     const team2 = factors.find(elem => elem.i === 2);
-    const draw = factors.find(elem => elem.i === 0);
     //get league title
     const league = item.data.leagues.find(league => {
       return bet.league_id === league.id
@@ -176,9 +171,6 @@ function betItemsLastHalf(item) {
             ${team1.v}
         </div>
         <div class="bet-item__factor bet-item__factor_2">
-            ${draw.v}
-        </div>
-        <div class="bet-item__factor bet-item__factor_3">
             ${team2.v}
         </div>
       </div>

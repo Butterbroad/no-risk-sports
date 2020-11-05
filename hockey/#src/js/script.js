@@ -40,23 +40,7 @@ const slider = new Swiper(sliderContainer, {
 
 
 
-function testWebP(callback) {
-
-    var webP = new Image();
-    webP.onload = webP.onerror = function () {
-        callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-
-    if (support == true) {
-        document.querySelector('body').classList.add('webp');
-    } else {
-        document.querySelector('body').classList.add('no-webp');
-    }
-});;
+@@include('webpSupport.js');
 
 
 
@@ -90,7 +74,6 @@ function betItemsFistHalf(item) {
     }
     const team1 = factors.find(elem => elem.i === 1);
     const team2 = factors.find(elem => elem.i === 2);
-    const draw = factors.find(elem => elem.i === 0);
     //get league title
     const league = item.data.leagues.find(league => {
       return bet.league_id === league.id
@@ -120,9 +103,6 @@ function betItemsFistHalf(item) {
             ${team1.v}
         </div>
         <div class="bet-item__factor bet-item__factor_2">
-            ${draw.v}
-        </div>
-        <div class="bet-item__factor bet-item__factor_3">
             ${team2.v}
         </div>
       </div>
@@ -146,7 +126,6 @@ function betItemsLastHalf(item) {
     }
     const team1 = factors.find(elem => elem.i === 1);
     const team2 = factors.find(elem => elem.i === 2);
-    const draw = factors.find(elem => elem.i === 0);
     //get league title
     const league = item.data.leagues.find(league => {
       return bet.league_id === league.id
@@ -176,9 +155,6 @@ function betItemsLastHalf(item) {
             ${team1.v}
         </div>
         <div class="bet-item__factor bet-item__factor_2">
-            ${draw.v}
-        </div>
-        <div class="bet-item__factor bet-item__factor_3">
             ${team2.v}
         </div>
       </div>
